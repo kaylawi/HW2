@@ -1,0 +1,11 @@
+
+  <h1>Simple WTF-Form</h1>
+  <form method="POST" action="http://localhost:5000/album_result"> <!--#action means the page that it is going to !-->
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.album.label }}{{ form.album() }}</p>
+      <p>{{ form.rating.label }}{{ form.rating() }}</p>
+      {{ form.submit() }}
+  </form>

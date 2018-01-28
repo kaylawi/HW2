@@ -1,7 +1,7 @@
 <ul>
-    {% for r in objects %}
+    {% for r in objects %} <!-- passing in object which is in Track Name if you see this line you need to send some information, request, objects is the dictionary so stuff has to be passed into it -- >
         <li>
-        <h2>Track Name: {{ r['trackName'] }}</h2>
+        <h2>Track Name: {{ r['trackName'] }}</h2> <!-- render a template and pass the variable --> 
         <div>See it on iTunes <a href="{{ r['trackViewUrl'] }}">here</a>.</div></li>
     {% endfor %}
 </ul>
